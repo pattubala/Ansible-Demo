@@ -1,0 +1,9 @@
+---
+- hosts: 192.168.56.109
+  vars:
+    http_port: 80
+  tasks:
+  - name: ensure apache is at the latest version
+    yum:
+      name: httpd
+      state: latest
